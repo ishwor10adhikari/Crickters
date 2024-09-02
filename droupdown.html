@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown</title>
+    <style>
+        ul {
+            
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #f1f1f1;
+        }
+
+        ul li {
+            
+            display: inline-block;
+            position: relative;
+        }
+
+        ul li:hover a {
+            background-color: #ddd;
+        }
+
+        ul li a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: black;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        ul ul.dropdown {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          
+        }
+
+        ul ul.dropdown li {
+            display: block;
+        }
+
+        ul ul.dropdown li a:hover {
+            background-color: #ddd;
+        }
+
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">QUOTES</a>
+                <ul class="dropdown">
+                    <li><a href="#">MOTIVATION</a></li>
+                    <li><a href="#">ACTOR</a></li>
+                    <li><a href="#">AUTHOR</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
